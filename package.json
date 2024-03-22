@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch nuevas_funcionalidades_js/app.js"
+    "start": "node --watch sincronia_asincronia/app.js"
   },
   "keywords": [],
   "author": "",
