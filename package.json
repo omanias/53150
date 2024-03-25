@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch sincronia_asincronia/app.js"
+    "start": "node --watch desafioEntregable/app.js"
   },
   "keywords": [],
   "author": "",
