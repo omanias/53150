@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch desafioEntregable/app.js"
+    "start": "node --watch manejo_de_archivos/managerUsuarios.js"
   },
   "keywords": [],
   "author": "",
