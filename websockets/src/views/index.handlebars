@@ -1,0 +1,27 @@
+<div>
+    <input type="text" id="mensaje" placeholder="Escribe un mensaje">
+    <button id="btn-send" onclick="enviarMensaje()">Enviar</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+{{!--
+<script src="/js/index.js"></script> --}}
+
+
+<script>
+    const socket = io()
+
+    function enviarMensaje() {
+        const mensaje = document.getElementById('mensaje').value
+        socket.emit('mensaje', mensaje)
+    }
+
+    const boton = document.getElementById('btn-send')
+    boton.addEventListener('click', () => {
+        console.log('click en boton')
+    })
+
+    socket.on('mensaje', (data) => {
+        console.log(`mensaje recibido del servidor ${data}`)
+    })
+</script>
