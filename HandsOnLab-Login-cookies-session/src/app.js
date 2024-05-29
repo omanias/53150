@@ -14,7 +14,7 @@ app.engine('hbs', engine({
     defaultLayout: 'main',
 }));
 app.set('view engine', 'hbs');
-app.set('views', './src/views');
+app.set('views', '../src/views');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
