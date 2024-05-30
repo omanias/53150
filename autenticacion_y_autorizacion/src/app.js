@@ -8,8 +8,6 @@ import sessionsRouter from './routes/api/sessions.js';
 import viewsRouter from './routes/views.js';
 import passport from 'passport';
 import initializePassport from './config/passport.config.js';
-import dotenv from 'dotenv'
-dotenv.config()
 
 const app = express();
 
@@ -24,10 +22,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(session({
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL }),
     secret: 'secretkey',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://omar:123789@cluster0.3lmci0d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0' }),
 }));
 
 initializePassport()
